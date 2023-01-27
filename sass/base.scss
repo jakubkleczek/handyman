@@ -1,10 +1,11 @@
+// COLOR VARIABLES
 :root {
     --color-primary: #ebdd19;
     --color-primary-light: #eae05b;
-    --color-primary-dark: #c3b712;
+    --color-primary-dark: #a2960d;
 
     --color-secondary: #222e58;
-    --color-secondary-light: #334072;
+    --color-secondary-light: #3d497c;
     --color-secondary-dark: #1d274b;
 
     --color-grey-light-1: #faf9f9;
@@ -19,4 +20,39 @@
 
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
     --shadow-light: 0 2rem 5rem rgba(0,0,0, .06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+
+    min-height: 100vh;
+}
+
+.container {
+    height: 100rem;
+    margin: 1.5rem;
+    display: grid;
+
+    grid-template-columns: 10rem repeat(4, 1fr);
+    grid-template-rows: 8rem repeat(3, 1fr);
+    grid-gap: 1rem;
 }
