@@ -19,7 +19,7 @@
 
 
     --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
-    --shadow-light: 0 2rem 5rem rgba(0,0,0, .06);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
 }
 
 * {
@@ -36,13 +36,18 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    color: var(--color-grey-dark-1);
     background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
 
     min-height: 100vh;
     max-width: 150rem;
@@ -50,11 +55,11 @@ body {
 }
 
 .container {
-    height: 100rem;
+    height: 150rem;
     margin: 2rem;
-    display: grid;
 
-    grid-template-columns: 10rem repeat(3, 1fr) min-content ;
-    grid-template-rows: 12rem repeat(5, max-content);
+    display: grid;
+    grid-template-columns: 10rem repeat(3, 1fr) min-content;
+    grid-template-rows: 12rem repeat(4, max-content);
     grid-gap: 5rem 3rem;
 }
