@@ -1,9 +1,9 @@
 :root {
   --color-primary: #ebdd19;
   --color-primary-light: #eae05b;
-  --color-primary-dark: #a2960d;
+  --color-primary-dark: #dccf16;
   --color-secondary: #222e58;
-  --color-secondary-light: #3d497c;
+  --color-secondary-light: #5562a0;
   --color-secondary-dark: #1d274b;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -33,15 +33,17 @@ body {
   font-weight: 400;
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
-  min-height: 100vh; }
+  min-height: 100vh;
+  max-width: 150rem;
+  margin: 0 auto; }
 
 .container {
   height: 100rem;
-  margin: 1.5rem;
+  margin: 2rem;
   display: grid;
-  grid-template-columns: 10rem repeat(4, 1fr);
-  grid-template-rows: 8rem repeat(3, 1fr);
-  grid-gap: 1rem; }
+  grid-template-columns: 10rem repeat(3, 1fr) min-content;
+  grid-template-rows: 12rem repeat(5, max-content);
+  grid-gap: 5rem 3rem; }
 
 .sidebar {
   background-color: var(--color-primary);
@@ -58,27 +60,103 @@ body {
       margin-bottom: 3rem; }
     .sidebar__lines:nth-child(5n+1) {
       grid-column: 1 / 3; }
-
-.side-btn {
-  background-color: var(--color-secondary);
-  border: none;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  margin-top: 3rem;
-  cursor: pointer;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  transition: all .2s; }
-  .side-btn:hover {
-    background-image: linear-gradient(to right bottom, var(--color-secondary-dark), var(--color-secondary-light));
-    transform: translateY(-2px); }
-  .side-btn:active {
-    transform: translateY(2px); }
+  .sidebar__btn {
+    background-color: var(--color-secondary);
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin-top: 3rem;
+    cursor: pointer;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    transition: all .2s; }
+    .sidebar__btn:hover {
+      background-color: var(--color-secondary-light);
+      transform: translateY(-2px); }
+    .sidebar__btn:active {
+      transform: translateY(2px); }
 
 .nav {
-  background-color: var(--color-grey-light-4);
+  background-color: var(--color-grey-light-2);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-dark);
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .nav h1 {
+    color: var(--color-primary-dark);
+    font-style: inherit;
+    font-size: 5rem;
+    text-transform: uppercase; }
+  .nav a {
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: var(--color-grey-dark-1);
+    transition: all .15s; }
+    .nav a:hover {
+      transform: translateY(-2px); }
+    .nav a:active {
+      color: var(--color-primary);
+      transform: translateY(2px); }
+
+.about-services {
+  background-color: var(--color-grey-light-2);
+  border-radius: 10px;
+  padding: 0 8rem;
+  box-shadow: var(--shadow-dark);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, max-content);
+  grid-column: 2 / 5;
+  grid-row: 2 / 4;
+  align-content: center;
+  grid-gap: 2rem; }
+  .about-services h2 {
+    color: var(--color-grey-dark-1);
+    font-size: 4rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    grid-column: 1 / 3;
+    grid-column-gap: 2rem;
+    justify-self: center;
+    align-self: center; }
+  .about-services__photo {
+    border-radius: 1rem;
+    height: 20rem;
+    margin-left: 3rem;
+    grid-column: 3 / 5;
+    justify-self: center;
+    align-self: center; }
+  .about-services p {
+    font-size: 1.8rem;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3; }
+
+.about-myself {
+  background-color: var(--color-grey-light-2);
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-dark);
+  grid-column: 5 / 6;
+  grid-row: 2 / 5; }
+  .about-myself h3 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem .5rem; }
+  .about-myself__photo-me {
+    height: 32rem;
+    margin: 2rem; }
+  .about-myself p {
+    font-size: 1.5rem; }
+
+.services {
+  background-color: var(--color-grey-light-2);
   border-radius: 10px;
   padding: 1rem;
-  grid-column: 2 / -1;
-  grid-row: 1 / 2; }
+  box-shadow: var(--shadow-dark); }
