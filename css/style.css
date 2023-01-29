@@ -42,8 +42,11 @@ body {
   margin: 0 auto; }
 
 .container {
-  height: 150rem;
-  margin: 2rem;
+  background-color: #777;
+  max-width: 200rem;
+  min-height: 150rem;
+  margin: 4rem;
+  border-radius: 2.5rem;
   display: grid;
   grid-template-columns: 10rem repeat(3, 1fr) min-content;
   grid-template-rows: 12rem repeat(4, max-content);
