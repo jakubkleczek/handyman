@@ -45,7 +45,9 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-grey-dark-1);
-    background-image: linear-gradient(to right bottom, var(--color-grey-light-1), var(--color-grey-light-2));
+    //background-image: linear-gradient(to right bottom, var(--color-grey-light-1), var(--color-grey-light-2));
+    //background-image: linear-gradient(to right bottom, var(--color-secondary-light), var(--color-secondary-dark));
+    background-color: var(--color-grey-light-1);
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -55,7 +57,7 @@ body {
 }
 
 .container {
-    background-color: var(--color-secondary-light);
+    //background-color: var(--color-secondary-light);
     max-width: 200rem;
     min-height: 150rem;
     margin: 4rem;

@@ -2,7 +2,7 @@
 /// SIDEBAR
 .sidebar {
     background-color: var(--color-primary);
-    box-shadow: var(--shadow-dark);
+    //box-shadow: var(--shadow-dark);
     border-radius: 2.5rem;
 
     grid-column: 1 / 2;
@@ -52,11 +52,12 @@
 ///////////////////////////////////
 /// NAVIGATION
 .nav {
-    background-color: var(--color-grey-light-2);
-    border-radius: 10px;
+    background-color: var(--color-secondary);
+    //border-radius: 10px;
     padding: 2rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
-    box-shadow: var(--shadow-dark);
+    //box-shadow: var(--shadow-dark);
 
 
 
@@ -67,19 +68,22 @@
     justify-content: space-around;
     align-items: center;
 
+    /*display: grid;
+    grid-template-columns: 3rem 3fr repeat(3, 1fr) 3rem;*/
+
     h1 {
         color: var(--color-primary-dark);
         font-style: inherit;
         font-size: 5rem;
         text-transform: uppercase;
+        
+        //grid-column: 2 / 3;
     }
 
     a {
         text-decoration: none;
         font-size: 2.5rem;
-        color: var(--color-grey-dark-1);
-
-
+        color: var(--color-grey-light-1);
 
         transition: all .15s;
 
@@ -93,7 +97,7 @@
         }
     }
 
-    &__gallery {}
+    &__gallery { }
 
     &__services {}
 
@@ -103,17 +107,17 @@
 ///////////////////////////////////
 /// ABOUT-SERVICES
 .about-services {
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-1);
     border-radius: 10px;
     padding: 0 8rem;
-    box-shadow: var(--shadow-dark);
+    //box-shadow: var(--shadow-dark);
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, max-content);
     ;
 
-    grid-column: 2 / 5;
+    grid-column: 2 / 6;
     grid-row: 2 / 4;
     align-content: center;
     grid-gap: 2rem;
@@ -150,19 +154,20 @@
 ///////////////////////////////////
 /// ABOUT-MYSELF
 .about-myself {
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-1);
     border-radius: 10px;
     padding: 3rem 2rem;
-    box-shadow: var(--shadow-dark);
+    //box-shadow: var(--shadow-dark);
 
-    grid-column: 5 / 6;
-    grid-row: 2 / 5;
+    grid-column: 2 / 6;
+    grid-row: 4 / 5;
 
     h3 {
         text-transform: uppercase;
         font-size: 2.5rem;
-        text-align: center;
+        //text-align: center;
         text-transform: uppercase;
+        margin-left: 5rem;
     }
 
     &__photo-me {
@@ -179,13 +184,13 @@
 ///////////////////////////////////
 /// SERVICES
 .services {
-    background-color: var(--color-grey-light-2);
+    background-color: var(--color-grey-light-1);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: var(--shadow-dark);
+    //box-shadow: var(--shadow-dark);
 
     grid-column: 2 / 5;
-    grid-row: 4 / 6;
+    grid-row: 6 / 7;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);

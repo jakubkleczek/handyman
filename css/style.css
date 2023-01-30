@@ -34,7 +34,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-1);
-  background-image: linear-gradient(to right bottom, var(--color-grey-light-1), var(--color-grey-light-2));
+  background-color: var(--color-grey-light-1);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -42,7 +42,6 @@ body {
   margin: 0 auto; }
 
 .container {
-  background-color: var(--color-secondary-light);
   max-width: 200rem;
   min-height: 150rem;
   margin: 4rem;
@@ -54,7 +53,6 @@ body {
 
 .sidebar {
   background-color: var(--color-primary);
-  box-shadow: var(--shadow-dark);
   border-radius: 2.5rem;
   grid-column: 1 / 2;
   grid-row: 1 / -1;
@@ -85,16 +83,17 @@ body {
       transform: translateY(2px); }
 
 .nav {
-  background-color: var(--color-grey-light-2);
-  border-radius: 10px;
+  background-color: var(--color-secondary);
   padding: 2rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
-  box-shadow: var(--shadow-dark);
   grid-column: 2 / -1;
   grid-row: 1 / 2;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  /*display: grid;
+    grid-template-columns: 3rem 3fr repeat(3, 1fr) 3rem;*/ }
   .nav h1 {
     color: var(--color-primary-dark);
     font-style: inherit;
@@ -103,7 +102,7 @@ body {
   .nav a {
     text-decoration: none;
     font-size: 2.5rem;
-    color: var(--color-grey-dark-1);
+    color: var(--color-grey-light-1);
     transition: all .15s; }
     .nav a:hover {
       transform: translateY(-2px); }
@@ -112,14 +111,13 @@ body {
       transform: translateY(2px); }
 
 .about-services {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   border-radius: 10px;
   padding: 0 8rem;
-  box-shadow: var(--shadow-dark);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, max-content);
-  grid-column: 2 / 5;
+  grid-column: 2 / 6;
   grid-row: 2 / 4;
   align-content: center;
   grid-gap: 2rem; }
@@ -145,17 +143,16 @@ body {
     grid-row: 2 / 3; }
 
 .about-myself {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   border-radius: 10px;
   padding: 3rem 2rem;
-  box-shadow: var(--shadow-dark);
-  grid-column: 5 / 6;
-  grid-row: 2 / 5; }
+  grid-column: 2 / 6;
+  grid-row: 4 / 5; }
   .about-myself h3 {
     text-transform: uppercase;
     font-size: 2.5rem;
-    text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-left: 5rem; }
   .about-myself__photo-me {
     height: 35rem;
     margin: 2rem;
@@ -164,12 +161,11 @@ body {
     font-size: 1.6rem; }
 
 .services {
-  background-color: var(--color-grey-light-2);
+  background-color: var(--color-grey-light-1);
   border-radius: 10px;
   padding: 1rem;
-  box-shadow: var(--shadow-dark);
   grid-column: 2 / 5;
-  grid-row: 4 / 6;
+  grid-row: 6 / 7;
   display: grid;
   grid-template-columns: repeat(2, 1fr); }
   .services h2 {
