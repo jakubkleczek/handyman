@@ -56,5 +56,17 @@ body {
     display: grid;
     grid-template-columns: 5rem [full-start] repeat(5, [col-start] 1fr [col-end]) [full-end] 5rem;
     grid-template-rows: 6rem repeat(5, max-content);
-    grid-row-gap: 5rem;
+    grid-row-gap: 10rem;
+
+    &__user {
+        
+    }
+
+    &__star {
+
+    }
+
+    &__review {
+
+    }
 }
