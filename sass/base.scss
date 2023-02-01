@@ -8,7 +8,7 @@
     --color-secondary-light: #5562a0;
     --color-secondary-dark: #1d274b;
 
-    --color-grey-light-1: #faf9f9;
+    --color-grey-light-1: #e1e1ee;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
     --color-grey-light-4: #ccc;
@@ -39,6 +39,7 @@ html {
 
 body {
     font-family: 'Open Sans', sans-serif;
+    color: var(--color-secondary);
     font-weight: 400;
     line-height: 1.6;
     min-height: 100vh;
@@ -47,12 +48,10 @@ body {
 }
 
 .container {
-    //background-color: var(--color-secondary-light);
+    background-color: var(--color-grey-light-1);
     max-width: 150rem;
     // min-height: 150rem;
     margin: 3rem;
-
-
 
     display: grid;
     grid-template-columns: 5rem [full-start] repeat(3, [col-start] 1fr [col-end]) [full-end] 5rem;
