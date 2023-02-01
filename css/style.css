@@ -41,7 +41,7 @@ body {
   max-width: 150rem;
   margin: 3rem;
   display: grid;
-  grid-template-columns: 5rem [full-start] repeat(3, [col-start] 1fr [col-end]) [full-end] 5rem;
+  grid-template-columns: 5rem [full-start] repeat(5, [col-start] 1fr [col-end]) [full-end] 5rem;
   grid-template-rows: 6rem repeat(5, max-content);
   grid-row-gap: 5rem; }
 
@@ -89,13 +89,78 @@ body {
       transform: translateY(2px); }
 
 .how-i-work {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr 1fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 2rem; }
+  .how-i-work h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    justify-self: center;
+    align-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / -1; }
+  .how-i-work__icon1, .how-i-work__icon2, .how-i-work__icon3, .how-i-work__icon4 {
+    fill: var(--color-secondary);
+    height: 5rem;
+    width: 5rem;
+    justify-self: end; }
+  .how-i-work p {
+    font-size: 1.8rem;
+    text-align: center; }
 
 .about-myself {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-gap: 2rem 4rem; }
+  .about-myself__photo-me {
+    height: 25rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    align-self: center;
+    z-index: 2; }
+    .about-myself__photo-me__background-yellow, .about-myself__photo-me__background-blue {
+      height: 27rem;
+      width: 19rem;
+      z-index: 1;
+      align-self: center;
+      grid-column: 1 / 2;
+      grid-row: 1 / 3; }
+    .about-myself__photo-me__background-blue {
+      background-color: var(--color-secondary);
+      transform: translatey(-1rem); }
+    .about-myself__photo-me__background-yellow {
+      background-color: var(--color-primary);
+      transform: translate(-2.2rem, 1rem); }
+  .about-myself__icon,
+  .about-myself h2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    align-self: center; }
+  .about-myself__icon {
+    fill: var(--color-secondary);
+    height: 5rem;
+    width: 5rem;
+    margin-right: 2rem; }
+  .about-myself h2 {
+    font-size: 3rem;
+    margin-left: 6rem;
+    text-transform: uppercase; }
+  .about-myself p {
+    font-size: 1.5rem; }
 
 .services {
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr); }
+  .services h2,
+  .services p {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3; }
 
 .reviews {
   grid-column: full-start / full-end; }
