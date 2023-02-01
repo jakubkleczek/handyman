@@ -8,8 +8,8 @@
     --color-secondary-light: #5562a0;
     --color-secondary-dark: #1d274b;
 
-    --color-grey-light-1: #e1e1ee;
-    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-1: #e8e8f1;
+    --color-grey-light-2: #c1c1d2;
     --color-grey-light-3: #f0eeee;
     --color-grey-light-4: #ccc;
 
@@ -55,18 +55,7 @@ body {
 
     display: grid;
     grid-template-columns: 5rem [full-start] repeat(5, [col-start] 1fr [col-end]) [full-end] 5rem;
-    grid-template-rows: 6rem repeat(5, max-content);
+    grid-template-rows: 6rem repeat(5, max-content) 10rem;
     grid-row-gap: 10rem;
 
-    &__user {
-        
-    }
-
-    &__star {
-
-    }
-
-    &__review {
-
-    }
 }
