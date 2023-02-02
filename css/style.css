@@ -42,7 +42,7 @@ body {
   margin: 3rem;
   display: grid;
   grid-template-columns: 5rem [full-start] repeat(5, [col-start] 1fr [col-end]) [full-end] 5rem;
-  grid-template-rows: 6rem repeat(5, max-content) 10rem;
+  grid-template-rows: 6rem min-content repeat(6, max-content) 10rem;
   grid-row-gap: 10rem; }
 
 .header {
@@ -87,6 +87,16 @@ body {
       transform: translateY(-2px); }
     .header__btn:active {
       transform: translateY(2px); }
+
+.gallery {
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .gallery__photo {
+    height: 200px; }
 
 .how-i-work {
   grid-column: full-start / full-end;

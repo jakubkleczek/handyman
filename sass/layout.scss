@@ -70,7 +70,19 @@
 
 ///////////////////////////////////
 /// IMAGES
+.gallery {
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    &__photo {
+        height: 200px;
+    }
+}
 
 ///////////////////////////////////
 /// HOW-I-WORK
